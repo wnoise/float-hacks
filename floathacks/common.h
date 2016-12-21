@@ -2,7 +2,6 @@
 #define FAST_INVERSE_CUBE_ROOT_COMMON_H
 
 #include <tuple>
-#include <limits>
 #include "consts/pow.h"
 
 namespace floathacks {
@@ -34,10 +33,6 @@ namespace floathacks {
 
     inline constexpr float l2f(unsigned long x) {
         return (blens { x }).float_view;
-    }
-
-    inline constexpr float epsilon() {
-        return l2f(f2l(1) + 1) - 1;
     }
 
     template<int num, int den>
